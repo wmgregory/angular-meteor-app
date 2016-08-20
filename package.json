@@ -1,5 +1,5 @@
 {
-  "name": "angular-meteor",
+  "name": "angular-meteor-app",
   "private": true,
   "scripts": {
     "start": "meteor run"
