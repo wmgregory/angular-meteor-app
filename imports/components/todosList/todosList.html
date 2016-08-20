@@ -1,9 +1,21 @@
 <header>
-  <h1>Todo List</h1>
+  <h2>Todo List</h2>
 </header>
+<div class="row">
+  <div class="col-md-4 col-md-push-8">
+    <h3>Add Task</h3>
+    <form class="new-task" ng-submit="$ctrl.addTask($ctrl.newTask)">
+      <label for="addTask">Task:</label>
+      <input class="form-control" ng-model="$ctrl.newTask" type="text" name="addTask" placeholder="Type to add new tasks"/>
+    </form>
+  </div>
 
-<ul>
-  <li ng-repeat="task in $ctrl.tasks">
-    {{task.text}}
-  </li>
-</ul>
+  <div class="col-md-8 col-md-pull-4">
+    <h3>Task List</h3>
+    <ul>
+      <li ng-repeat="task in $ctrl.tasks">
+        {{task.text}}
+      </li>
+    </ul>
+  </div>
+</div>
